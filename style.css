@@ -96,9 +96,16 @@ todo aqui son clases
   border-right: 2px solid #bdbdbd;
   position: fixed;
   height: 100%;
-  overflow: scroll;   
-  /* overflow para poder hacer scroll en la barra lateral,
+   /* overflow para poder hacer scroll en la barra lateral,
    ya que el texto  */
+  overflow: scroll; 
+/* 
+* overflow-x: hidden sirve para quitar el scroll lateral
+* en este caso no sirve y solo se ve innecesario
+*/
+  overflow-x: hidden; 
+   /* edición de la barra de scroll */
+   scrollbar-color: #343434 white;
 }
 .sidebar h2 {
   border-bottom: 2px solid;
@@ -198,6 +205,29 @@ porque no encontré otra forma más practica
   opacity: 1;
 }
 
+/* tabla */
+ .tabla-maquinas {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tabla-maquinas th, .tabla-maquinas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  .tabla-maquinas th {
+    background-color: #e2e2e2;
+    color: rgb(0, 0, 0);
+  }
+
+
+
+  .tabla-maquinas img {
+height: 80px;
+text-align: center;
+  }
+
+
 /* 
 *media query
 */
@@ -232,6 +262,10 @@ Acomodamos el contenido en reversa para que el nav se muestre primero  y despues
 }
 
   .navbar .container {
+    /*
+     pones la barra de navegación en columnas y
+     pides que todo se posicione al inicio (a la derecha)
+     */
     flex-direction: column;
     align-items: flex-start;
   }
@@ -248,19 +282,27 @@ Acomodamos el contenido en reversa para que el nav se muestre primero  y despues
   .navbar h1 {
     margin-bottom: 10px;
   }
+/* hacer la tabla para la vista en dispositivos moviles */
+.tabla-maquinas img{
+ width: 70px;
+
+}
+
 }
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Sección: Responsive Design */
+    flex-direction: column; /* pones el contenedor como columnas */
+    margin: 0;
   }
 
   .main-content {
-    order: -1; /* Sección: Responsive Design */
-    margin-top: 20px; /* Sección: Responsive Design */
+    order: -1; 
+    margin-top: 20px; 
   }
 
   .sidebar {
-    margin-top: 20px; /* Sección: Responsive Design */
+    margin-top: 20px; 
+
   }
 }
