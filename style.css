@@ -283,8 +283,21 @@ Acomodamos el contenido en reversa para que el nav se muestre primero  y despues
     margin-bottom: 10px;
   }
 /* hacer la tabla para la vista en dispositivos moviles */
+table{
+  width: 100%;
+}
+
+table tr{
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
 .tabla-maquinas img{
- width: 70px;
+ width: 60px;
 
 }
 
