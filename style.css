@@ -302,13 +302,17 @@ table td[data-titulo]{
 
 table [data-titulo]::before{
   content: attr(data-titulo);
-  width: 190px;
+  width: 220px;
   /* hacemos que el titulo se muestre antes de la información */
 }
 
 .tabla-maquinas img{
  width: 60px;
 
+}
+.tabla-maquinas td{
+  width: 350px;
+  
 }
 .tabla-maquinas th{
   visibility: hidden;
