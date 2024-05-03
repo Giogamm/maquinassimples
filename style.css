@@ -296,9 +296,27 @@ table tr{
   margin-bottom: 1em;
 }
 
+table td[data-titulo]{
+  display: flex;
+}
+
+table [data-titulo]::before{
+  content: attr(data-titulo);
+  width: 350px;
+  /* hacemos que el titulo se muestre antes de la información */
+}
+
 .tabla-maquinas img{
  width: 60px;
 
+}
+.tabla-maquinas th{
+  visibility: hidden;
+}
+tr:first-child{
+display: none;
+visibility: hidden;
+/* ocultamos las secciones de los nombres para que no sean visibles en celular */
 }
 
 }
