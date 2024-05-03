@@ -302,7 +302,7 @@ table td[data-titulo]{
 
 table [data-titulo]::before{
   content: attr(data-titulo);
-  width: 350px;
+  width: 190px;
   /* hacemos que el titulo se muestre antes de la información */
 }
 
