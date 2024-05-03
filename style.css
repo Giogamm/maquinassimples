@@ -294,24 +294,26 @@ table tr{
   border: 1px solid gray;
   padding: 1em;
   margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
 }
 
-table td[data-titulo]{
+table td{
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-table [data-titulo]::before{
-  content: attr(data-titulo);
-  width: 220px;
-  /* hacemos que el titulo se muestre antes de la información */
-}
+
 
 .tabla-maquinas img{
  width: 60px;
 
 }
 .tabla-maquinas td{
-  width: 300px;
+  width: 250px;
   
 }
 .tabla-maquinas th{
