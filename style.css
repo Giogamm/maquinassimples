@@ -8,22 +8,24 @@ body {
   background-color: antiquewhite;
   font-family: sans-serif;
 }
-h1, h2, h3 {
-    margin-top: 0;                     
-    margin-bottom: 20px;             
-    border-bottom: 2px solid #3d4144;  
-    padding-bottom: 10px; 
-    text-align: center;        
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3d4144;
+  padding-bottom: 10px;
+  text-align: center;
 }
 h2 {
-    text-shadow: 2px 2px 6px #4f4f5480; 
-   
+  text-shadow: 2px 2px 6px #4f4f5480;
 }
-main h2{
-     padding: 20px;
+main h2 {
+  padding: 20px;
 }
-p{
-    padding: 20px;
+p {
+  padding: 20px;
+  text-align: justify;
 }
 /* 
 todo aqui son clases
@@ -92,97 +94,105 @@ todo aqui son clases
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-right: 2px solid #bdbdbd;
-
+  position: fixed;
+  height: 100%;
 }
-.sidebar h2{
-    border-bottom: 2px solid;
-    padding-bottom: 10px;
-    font-size: 24px;
-}
-
-.sidebar h1{
-    border-bottom: 2px solid;
-    padding-bottom: 7px;
-    font-size: 30px;
-
-}
-.side-menu{
-    list-style: none;
-}
-.side-menu li a{
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 10px 20px;
-margin: 10px 0;
- transition: background-color 0.3s, color 0.3s; 
-   font-style: italic;   
-      text-decoration: underline; 
-       border-radius: 5px;     
-       border: 1px solid transparent;
+.sidebar h2 {
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  font-size: 24px;
 }
 
-.side-menu li a:hover{
-background-color: #aaa;
-color: #fff;
-border-color: #969696;
+.sidebar h1 {
+  border-bottom: 2px solid;
+  padding-bottom: 7px;
+  font-size: 30px;
+}
+.side-menu {
+  list-style: none;
+}
+.side-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  transition: background-color 0.3s, color 0.3s;
+  font-style: italic;
+  text-decoration: underline;
+  border-radius: 5px;
+  border: 1px solid transparent;
 }
 
-.footer{
-    background-color: #333;
-    color: #fff;
-
-    text-align: center;
+.side-menu li a:hover {
+  background-color: #aaa;
+  color: #fff;
+  border-color: #969696;
 }
 
+.footer {
+  background-color: #333;
+  color: #fff;
 
+  text-align: center;
+}
+
+/* La clase hola es para que el contenido se desplace a la derecha
+porque no encontré otra forma más practica
+*/
+.hola {
+  float: left;
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid #bdbdbd;
+  height: 100vh;
+}
 /* Galeria */
 
-
 .gallery {
-    display: grid;                   
-    /* ajustar el grid a la pantalla sin mediaquery */
-    grid-template-columns: repeat(
-        auto-fill, 
-        minmax(200px, 1fr)
-    );   
-    gap: 10px;        
-   max-width: 800px;
-   justify-items: center; 
-   /* Pone los iconos en el medio */
+  display: grid;
+  /* ajustar el grid a la pantalla sin mediaquery */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  justify-items: center;
+  /* Pone los iconos en el medio */
 }
 
 .gallery-image {
-    width: 220px;               
-    height: 220px;                     
-    border-radius: 5px;               
-    transition: transform 0.3s;        
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-    position: relative;        
+  width: 220px;
+  height: 220px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .gallery-image:hover {
-    transform: scale(1.1);          
-    cursor: pointer;              
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .gallery-image::after {
-    content: attr(data-info);         
-    position: absolute;               
-    bottom: 0;                        
-    left: 0;                        
-    right: 0;                      
-    background-color: rgba(0, 0, 0, 0.7); 
-    color: #ffffff;                 
-    padding: 5px;                   
-    font-size: 12px;                
-    opacity: 0;                     
-    transition: opacity 0.3s;        
-    border-bottom-left-radius: 5px;  
-    border-bottom-right-radius: 5px; 
+  content: attr(data-info);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 5px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .gallery-image:hover::after {
-    opacity: 1;                       
+  opacity: 1;
 }
 
 /* 
@@ -190,43 +200,64 @@ border-color: #969696;
 */
 
 @media screen and (max-width: 768px) {
-    .sidebar {
-        width: 100%;                  
-        float: none;                   
-        margin-bottom: 20px;           
-        border-right: none;           
-    }
+  .sidebar {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+    border-right: none;
+    position: static;
+  }
 
-    .navbar .container {
-        flex-direction: column;        
-        align-items: flex-start;        
-    }
+/* 
+Acomodamos el contenido en reversa para que el nav se muestre primero  y despues el aside 
+*/
+.reverse{  
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
 
-    .nav-menu {
-        flex-direction: column;         
-        gap: 10px;                     
-    }
+  .hola{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+.navbar{
+  
+  width: 100%;
+}
 
-    .navbar-menu li {
-        margin: 0;                   
-    }
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .navbar h1 {
-        margin-bottom: 10px;          
-    }
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-menu li {
+    margin: 0;
+  }
+
+  .navbar h1 {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;          /* Sección: Responsive Design */
-    }
+  .container {
+    flex-direction: column; /* Sección: Responsive Design */
+  }
 
-    .main-content {
-        order: -1;                       /* Sección: Responsive Design */
-        margin-top: 20px;                /* Sección: Responsive Design */
-    }
+  .main-content {
+    order: -1; /* Sección: Responsive Design */
+    margin-top: 20px; /* Sección: Responsive Design */
+  }
 
-    .sidebar {
-        margin-top: 20px;                /* Sección: Responsive Design */
-    }
+  .sidebar {
+    margin-top: 20px; /* Sección: Responsive Design */
+  }
 }
