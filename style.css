@@ -143,8 +143,9 @@ todo aqui son clases
 .footer {
   background-color: #333;
   color: #fff;
-
   text-align: center;
+    display: grid;
+  place-items: center;
 }
 
 /* La clase hola es para que el contenido se desplace a la derecha
@@ -166,7 +167,7 @@ porque no encontré otra forma más practica
   display: grid;
   /* ajustar el grid a la pantalla sin mediaquery */
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
+  gap: 17px;
   max-width: 400px;
   justify-items: center;
   /* Pone los iconos en el medio */
@@ -176,33 +177,16 @@ porque no encontré otra forma más practica
   width: 120px;
   height: 120px;
   border-radius: 5px;
-  transition: transform 0.3s;
+  /* Transición que transforma la escala en 0.6 segundos y las sombras tambien */
+  transition: all 0.6s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
 .gallery-image:hover {
   transform: scale(1.1);
+  box-shadow: 5px 5px 10px black;
   cursor: pointer;
-}
-.gallery-image::after {
-  content: attr(data-info);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  padding: 5px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.gallery-image:hover::after {
-  opacity: 1;
 }
 
 /* tabla */
@@ -253,8 +237,9 @@ Acomodamos el contenido en reversa para que el nav se muestre primero  y despues
   .hola{
     width: 0;
     height: 0;
-    visibility: hidden;
-    position: fixed;
+    /* con display: none quito el bloque para que no sea visible en el celular */
+   display: none;
+ 
   }
 .navbar{
   
